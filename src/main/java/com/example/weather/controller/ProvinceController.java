@@ -30,12 +30,12 @@ public class ProvinceController {
     }
 
     @RequestMapping("/zone")
-    public List<Province> getProvincesByZone(@RequestParam("name") String requestZone ) {
+    public List<Province> getProvincesByZone(@RequestParam("zoneName") String requestZone ) {
        return provinceService.getProvinceByZone(requestZone);
     }
 
     @RequestMapping("/province")
-    public Province getProvinceByName(@RequestParam("name") String requestProvince ) {
+    public Province getProvinceByName(@RequestParam("provinceName") String requestProvince ) {
         return provinceService.getProvinceByName(requestProvince);
     }
 

@@ -30,7 +30,7 @@ public class CoreController {
     }
 
     @RequestMapping("/zone")
-    public List<JSONObject> getWeathersByZone(@RequestParam(name = "apiKey") String apiKey, @RequestParam(name = "zone") String zone) {
+    public List<JSONObject> getWeathersByZone(@RequestParam(name = "apiKey") String apiKey, @RequestParam(name = "zoneName") String zone) {
         return coreService.getWeathersFromAPI(apiKey, provinceService.getProvinceByZone(zone));
     }
 
