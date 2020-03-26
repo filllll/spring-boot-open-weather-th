@@ -1,0 +1,10 @@
+com/example/weather/model/TransactionLog.class
+com/example/weather/repository/ProvinceRepository.class
+com/example/weather/service/TransactionLogService.class
+com/example/weather/service/CoreService.class
+com/example/weather/model/Province.class
+com/example/weather/controller/CoreController.class
+com/example/weather/service/ProvinceService.class
+com/example/weather/controller/ProvinceController.class
+com/example/weather/WeatherApplication.class
+com/example/weather/repository/TransactionLogRepository.class
