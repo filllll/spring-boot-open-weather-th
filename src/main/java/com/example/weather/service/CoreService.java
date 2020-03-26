@@ -26,8 +26,8 @@ public class CoreService {
         this.transactionLogService = transactionLogService;
     }
 
-    public List<JSONObject> getWeathersFromAPI(List<Province> provinces) {
-
+    public List<JSONObject> getWeathersFromAPI(String apiKey, List<Province> provinces) {
+        System.out.println("Here is API key: " + apiKey);
         List<JSONObject> weathers = new ArrayList<>();
         try {
             for (Province province : provinces) {
@@ -35,7 +35,7 @@ public class CoreService {
                 String url = "http://api.openweathermap.org/data/2.5/weather/";
                 String charset = "UTF-8";  // Or in Java 7 and later, use the constant: java.nio.charset.StandardCharsets.UTF_8.name()
                 String province_id = province.getApiId();
-                String apiKey = "3d338ab42f85989386cfe264d5367ed9";
+                String key = apiKey;
 
                 String query = String.format("id=%s&appid=%s",
                         URLEncoder.encode(province_id, charset),

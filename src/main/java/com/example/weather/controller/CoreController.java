@@ -25,13 +25,13 @@ public class CoreController {
     }
 
     @RequestMapping("/all")
-    public List<JSONObject> getAllCurrentWeather() {
-        return coreService.getWeathersFromAPI(provinceService.getAllProvinces());
+    public List<JSONObject> getAllCurrentWeather(@RequestParam(name = "apiKey") String apiKey) {
+        return coreService.getWeathersFromAPI(apiKey, provinceService.getAllProvinces());
     }
 
     @RequestMapping("/zone")
-    public List<JSONObject> getWeathersByZone(@RequestParam(name = "zone") String zone) {
-        return coreService.getWeathersFromAPI(provinceService.getProvinceByZone(zone));
+    public List<JSONObject> getWeathersByZone(@RequestParam(name = "apiKey") String apiKey, @RequestParam(name = "zone") String zone) {
+        return coreService.getWeathersFromAPI(apiKey, provinceService.getProvinceByZone(zone));
     }
 
 
